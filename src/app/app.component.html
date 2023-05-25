@@ -1,0 +1,25 @@
+<!-- Sidenav container -->
+<mat-sidenav-container>
+  <!-- Side navigation -->
+  <mat-sidenav #sidenav mode="side">
+    <app-sidenav *ngIf="!this.isSignInPage()"></app-sidenav>
+  </mat-sidenav>
+
+  <!-- Main contents -->
+  <mat-sidenav-content>
+    <!-- Loading Spinner -->
+    <app-loading></app-loading>
+
+    <!-- Wrapper of body -->
+    <div class="body-wrapper">
+      <!-- Header -->
+      <app-header *ngIf="!this.isSignInPage()"></app-header>
+
+      <!-- Router -->
+      <router-outlet></router-outlet>
+
+      <!-- Footer -->
+      <app-footer *ngIf="!this.isSignInPage()"></app-footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
