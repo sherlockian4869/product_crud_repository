@@ -5,7 +5,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { SessionStorageService } from './session-storage.service';
 
-xdescribe('SessionStorageService', () => {
+describe('SessionStorageService', () => {
   let service: SessionStorageService;
   let expectedUser: User;
 
